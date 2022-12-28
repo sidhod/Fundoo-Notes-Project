@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+
+}
+
+.box {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 30vw;
+    height: 70vh;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box h2 {
+    margin: 0px 0 -0.125rem;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    color: #202124;
+    font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.box .inputBox {
+    position: relative;
+}
+
+.box .inputBox input {
+    width: 93%;
+    padding: 0.625rem 10px;
+    font-size: 1rem;
+    letter-spacing: 0.062rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 4px;
+
+}
+
+.Label1 {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: grey;
+
+}
+
+.Label2 {
+    position: absolute;
+    top: 10;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: grey;
+
+}
+
+.forgot-Password {
+    color: blue;
+    text-decoration: none;
+}
+
+.learn-more-label {
+    color: #57595f;
+    font-size: 15px;
+}
+
+.learn-more-button {
+    color: blue;
+    text-decoration: none;
+}
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-3 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.create-account {
+    color: blue;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.button-2 {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #1a73e8;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1rem;
+    float: right;
+}
