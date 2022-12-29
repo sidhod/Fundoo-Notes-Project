@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Signin from './Pages/Signin/signin';
+import Signup from './Pages/Signup/signup';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Signin />
+      {/* <Signin /> */}
+      <Signup />
     </div>
   );
 }
