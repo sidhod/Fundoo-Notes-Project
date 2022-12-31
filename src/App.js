@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Signin from './Pages/Signin/signin';
 import Signup from './Pages/Signup/signup';
+import Header from './Components/header/header';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         </a>
       </header> */}
       {/* <Signin /> */}
-      <Signup />
+      {/* <Signup /> */}
+      <Header />
     </div>
   );
 }
