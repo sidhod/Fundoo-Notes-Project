@@ -3,7 +3,8 @@ import './App.css';
 import Signin from './Pages/Signin/signin';
 import Signup from './Pages/Signup/signup';
 import Header from './Components/header/header';
-import TakeNote1 from './Components/header/TakeNote1/takenote1';
+import TakeNote1 from './Components/TakeNote1/takenote1';
+
 
 function App() {
   return (
