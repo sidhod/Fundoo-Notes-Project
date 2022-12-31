@@ -1,0 +1,78 @@
+.main-header {
+    width: 100vw;
+    height: 7vh;
+    border-bottom: 1px solid #dadce0;
+    padding: 7px 7px 7px 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mainMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menuIcon {
+    color: gray;
+    margin-left: 39%;
+    margin-right: 10%;
+}
+
+.keepImg {
+    margin-left: 10%;
+}
+
+.heading {
+    font-size: 22px;
+    margin-left: 10%;
+    color: rgb(94, 91, 91);
+}
+
+
+.searchHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f1f3f4;
+    height: 95%;
+    width: 47%;
+    margin-left: 8%;
+}
+
+.search {
+    margin-left: 3%;
+    color: gray;
+}
+
+.searchInput {
+    margin-left: 3%;
+}
+
+.refreshHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    width: 10%;
+    margin-left: 18%;
+}
+
+.account {
+    width: 5%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 3%;
+
+}
+
+.symbol-color {
+    color: gray;
+}
