@@ -1,0 +1,97 @@
+.takeNoteTwo {
+    height: 18vh;
+    width: 40vw;
+    position: relative;
+    left: 500px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.takeNote2A {
+    width: 97%;
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5px;
+}
+
+.titlePin {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    width: 80%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 530;
+    border: none;
+    outline: none;
+    letter-spacing: .0228571em;
+}
+
+.description {
+    height: 65% !important;
+    width: 100%;
+}
+
+.takeNote2Decxription {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 530;
+    border: none;
+    outline: none;
+    letter-spacing: .0228571em;
+}
+
+.note2c {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.note2d {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.close {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    left: 9.5%;
+}
+
+/* .closeButton {
+    text-transform: none;
+    font-size: 58px;
+    color: black;
+    font-weight: bold;
+    font-family: Google Sans, Roboto, Arial, sans-serif;
+
+} */
+.buttonColorblack {
+    font-size: small;
+}
+
+.buttonColor {
+    color: gray;
+    font-size: small;
+}

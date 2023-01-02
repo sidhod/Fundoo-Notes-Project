@@ -7,7 +7,7 @@ import { Paper } from '@mui/material';
 import './takenote1.css'
 function TakeNote1() {
     return (
-        <Paper className='takeNote'>
+        <Paper className='takeNote' elevation={5}>
             <Box className='takeNoteOne'>
                 <input className='noteOne' placeholder='Take a note...'></input>
                 <Box className='takeNoteIcon'>
