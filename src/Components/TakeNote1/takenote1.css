@@ -30,7 +30,8 @@
     height: 60%;
     margin-top: 1px;
     font-size: 14px;
-    color: #202124;
+    color: black;
+    color: #783abc ! important;
     font-weight: 550;
     letter-spacing: .01428571em;
     line-height: 1.0rem;

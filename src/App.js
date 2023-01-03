@@ -5,6 +5,8 @@ import Signup from './Pages/Signup/signup';
 import Header from './Components/header/header';
 import TakeNote1 from './Components/TakeNote1/takenote1';
 import TakeNote2 from './Components/TakeNote2/takenote2';
+import TakeNote3 from './Components/TakeNote3/takenote3';
+import Dashboard from './Pages/Dashboard/dashboard';
 
 
 function App() {
@@ -26,9 +28,11 @@ function App() {
       </header> */}
       {/* <Signin /> */}
       {/* <Signup /> */}
-      <Header />
+      {/* <Header />
       <TakeNote1 />
       <TakeNote2 />
+      <TakeNote3 /> */}
+      <Dashboard />
     </div>
   );
 }
