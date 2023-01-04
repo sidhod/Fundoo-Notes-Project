@@ -1,11 +1,14 @@
-import { border } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Header from "../../Components/header/header";
 import TakeNote1 from "../../Components/TakeNote1/takenote1";
 import TakeNote2 from "../../Components/TakeNote2/takenote2";
 import TakeNote3 from "../../Components/TakeNote3/takenote3";
 import { getNoteApi } from "../../services/dataServices";
+
 function Dashboard() {
+    const allNotes = {
+        width: "65vw", height: "100vh", display: "flex", flexDirection: 'row', flexWrap: "wrap", position: 'relative', left: '280px', top: '50px'
+    }
     const [toggle, setToggle] = useState(false)
     const [noteList, setNoteList] = useState([])
     const listenToTakeNote1 = () => {
@@ -31,9 +34,7 @@ function Dashboard() {
                     toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
                 }
             </div>
-            <div style={{
-                width: "65vw", height: "100vh", display: "flex", flexDirection: 'row', flexWrap: "wrap", position: 'relative', left: '280px', top: '50px'
-            }}>
+            <div style={allNotes}>
                 {
                     noteList.map((note) => (
                         <TakeNote3 note={note} />
