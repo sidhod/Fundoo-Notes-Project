@@ -5,8 +5,10 @@ import './takenote2.css'
 import React from 'react';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import { AddAlertOutlined, ArchiveOutlined, InsertPhotoOutlined, MoreVertOutlined, PersonAddAlt1Outlined, PushPinOutlined, RedoOutlined, UndoOutlined } from '@mui/icons-material';
-function TakeNote2() {
-
+function TakeNote2(props) {
+    const openNote2 = () => {
+        props.listenToTakeNoteProp2()
+    }
     return (
 
         <Paper elevation={5} className='takeNoteTwo'>
@@ -14,9 +16,7 @@ function TakeNote2() {
                 <Box className='titlePin'>
                     <InputBase className='title' placeholder='Title'></InputBase>
                     <IconButton className='icons'>
-
-                        <PushPinOutlined></PushPinOutlined>
-
+                        <PushPinOutlined />
                     </IconButton>
                 </Box>
                 <Box className='description'>
@@ -34,7 +34,7 @@ function TakeNote2() {
                         <RedoOutlined className='buttonColor' />
                     </Box>
                     <Box className='close'>
-                        <Button variant="text" size="small" className="closeButton" style={{ textTransform: "none", fontSize: "16px", color: "black", fontWeight: "bold", fontFamily: '"Google Sans",Roboto,Arial,sans-serif' }}>Close</Button>
+                        <Button variant="text" size="small" className="closeButton" style={{ textTransform: "none", fontSize: "14px", color: "black", fontWeight: "600", fontFamily: '"Google Sans",Roboto,Arial,sans-serif', marginRight: "45px" }} onClick={openNote2}>Close</Button>
                     </Box>
                 </Box>
             </Box>

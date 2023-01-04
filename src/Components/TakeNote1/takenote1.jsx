@@ -7,7 +7,7 @@ import { Paper, InputBase } from '@mui/material';
 import './takenote1.css'
 function TakeNote1(props) {
     const openNote2 = () => {
-        props.listenToTakeNote12()
+        props.listenToTakeNoteProp1()
     }
     return (
         <Paper className='takeNote' elevation={5} onClick={openNote2}>

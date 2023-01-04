@@ -1,18 +1,18 @@
 .takeNoteTwo {
-    height: 18vh;
+    height: 20vh;
     width: 40vw;
     position: relative;
     left: 500px;
-    top: 50px;
+    top: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 10%;
 }
 
 .takeNote2A {
-    width: 97%;
-    height: 16vh;
+    width: 95%;
+    height: 18vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +61,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    margin-top: 1%;
 }
 
 .note2d {
@@ -79,14 +79,7 @@
     left: 9.5%;
 }
 
-/* .closeButton {
-    text-transform: none;
-    font-size: 58px;
-    color: black;
-    font-weight: bold;
-    font-family: Google Sans, Roboto, Arial, sans-serif;
 
-} */
 .greyButton {
     color: rgb(75, 74, 74);
 }
@@ -97,5 +90,5 @@
 
 .buttonColor {
     color: rgb(165, 162, 162);
-    font-size: small;
+    font-size: medium;
 }
