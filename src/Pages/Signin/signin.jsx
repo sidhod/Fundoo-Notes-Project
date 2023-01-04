@@ -56,7 +56,10 @@ function Signin() {
         }
         if (emailTest === true && passwordTest === true) {
             loginApi(signinObj)
-                .then((reponse) => { console.log(reponse) })
+                .then((response) => {
+                    console.log(response);
+                    localStorage.setItem('token', response.data.data)
+                })
                 .catch((error) => { console.log(error) });
         }
     }

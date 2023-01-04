@@ -4,17 +4,17 @@ import React from 'react';
 import { IconButton, Paper } from '@mui/material';
 import { AddAlertOutlined, ArchiveOutlined, InsertPhotoOutlined, MoreVertOutlined, PersonAddAlt1Outlined, PushPinOutlined } from '@mui/icons-material';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
-function TakeNote3() {
+function TakeNote3(props) {
     return (
         <Box className='frame'>
             <Paper className='outerContainer'>
                 <Box className='innerContainer1'>
                     <Box className='leftContainer'>
                         <Box className='note3a'>
-                            <span><b>Note1</b></span>
+                            <span><b>{props.note.Title}</b></span>
                         </Box>
                         <Box className='note3b'>
-                            <span>Note1-Sid </span>
+                            <span>{props.note.Descreption}</span>
                         </Box>
                     </Box>
                     <IconButton className='iconpin'>
