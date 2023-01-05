@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Header from "../../Components/header/header";
 import TakeNote1 from "../../Components/TakeNote1/takenote1";
@@ -7,7 +8,7 @@ import { getNoteApi } from "../../services/dataServices";
 
 function Dashboard() {
     const allNotes = {
-        width: "65vw", height: "100vh", display: "flex", flexDirection: 'row', flexWrap: "wrap", position: 'relative', left: '280px', top: '50px'
+        display: 'flex', flexDirection: 'row', position: 'relative', left: '280px', top: '50px', width: '70vw', flexWrap: 'wrap'
     }
     const [toggle, setToggle] = useState(false)
     const [noteList, setNoteList] = useState([])
@@ -17,13 +18,17 @@ function Dashboard() {
     const listenToTakeNote2 = () => {
         setToggle(false);
     }
-    useEffect(() => {
+    const getNote = () => {
         getNoteApi()
             .then((response) => {
                 console.log(response)
                 setNoteList(response.data.data)
             })
             .catch((error) => console.log(error))
+
+    }
+    useEffect(() => {
+        getNote()
     }, []);
     console.log(noteList);
     return (
@@ -37,7 +42,7 @@ function Dashboard() {
             <div style={allNotes}>
                 {
                     noteList.map((note) => (
-                        <TakeNote3 note={note} />
+                        <TakeNote3 note={note} getNote={getNote} />
                     ))
                 }
             </div>

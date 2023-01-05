@@ -6,8 +6,18 @@ import React, { useState } from 'react';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import { AddAlertOutlined, ArchiveOutlined, InsertPhotoOutlined, MoreVertOutlined, PersonAddAlt1Outlined, PushPinOutlined, RedoOutlined, UndoOutlined } from '@mui/icons-material';
 import { createNoteApi } from '../../services/dataServices';
+import ColorPopper from '../colorpopper/colorPopper';
+
 function TakeNote2(props) {
-    const [note, setNote] = useState({ Title: "", Descreption: "" })
+    const [note, setNote] = useState({ Title: "", Descreption: "", Color: "white", isArchived: false })
+    const listenColor = (color) => {
+        setNote((prevState) => ({
+            ...prevState,
+            Color: color
+        })
+
+        )
+    }
     const takeTitle = (event) => {
         setNote(prevState => ({
             ...prevState,
@@ -20,6 +30,12 @@ function TakeNote2(props) {
             Descreption: event.target.value
         }))
     }
+    const archived = () => {
+        setNote(prevState => ({
+            ...prevState,
+            isArchived: true
+        }))
+    }
     const openNote2 = () => {
         props.listenToTakeNoteProp2()
         console.log(note)
@@ -30,7 +46,7 @@ function TakeNote2(props) {
     }
     return (
 
-        <Paper elevation={5} className='takeNoteTwo'>
+        <Paper elevation={5} className='takeNoteTwo' sx={{ backgroundColor: note.Color }}>
             <Box className='takeNote2A'>
                 <Box className='titlePin'>
                     <InputBase className='title' placeholder='Title' onChange={takeTitle}></InputBase>
@@ -45,9 +61,10 @@ function TakeNote2(props) {
                     <Box className='note2d'>
                         <AddAlertOutlined className='greyButton' fontSize="small" />
                         <PersonAddAlt1Outlined className='greyButton' fontSize="small" />
-                        <ColorLensOutlinedIcon className='greyButton' fontSize="small" />
+                        {/* <ColorLensOutlinedIcon className='greyButton' fontSize="small" /> */}
+                        <ColorPopper listenColor={listenColor} action='create' />
                         <InsertPhotoOutlined className='greyButton' fontSize="small" />
-                        <ArchiveOutlined className='greyButton' fontSize="small" />
+                        <ArchiveOutlined className='greyButton' fontSize="small" onClick={archived} />
                         <MoreVertOutlined className='greyButton' fontSize="small" />
                         <UndoOutlined className='buttonColor' />
                         <RedoOutlined className='buttonColor' />
