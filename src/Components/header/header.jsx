@@ -8,12 +8,16 @@ import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { InputBase } from '@mui/material';
 import './header.css'
-function Header() {
+function Header(props) {
+    const openDrawerHeader = () => {
+        props.openDrawer();
+    }
+
     return (
         <div>
             <div className='main-header'>
                 <div className='mainMenu'>
-                    <MenuIcon className="menuIcon" />
+                    <MenuIcon className="menuIcon" onClick={openDrawerHeader} />
                     <img className="keepImg" src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="logo" height="40" width="40" />
                     <span className="heading">Keep</span>
                 </div>

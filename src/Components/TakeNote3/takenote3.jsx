@@ -2,19 +2,20 @@ import { Box } from '@mui/system';
 import './takenote3.css'
 import React from 'react';
 import { IconButton, Paper } from '@mui/material';
-import { AddAlertOutlined, ArchiveOutlined, InsertPhotoOutlined, MoreVertOutlined, PersonAddAlt1Outlined, PushPinOutlined } from '@mui/icons-material';
+import { AddAlertOutlined, ArchiveOutlined, InsertPhotoOutlined, Margin, MoreVertOutlined, PersonAddAlt1Outlined, PushPinOutlined } from '@mui/icons-material';
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import ColorPopper from '../colorpopper/colorPopper';
 import { isArchivedApi, isDeleteApi } from '../../services/dataServices';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 function TakeNote3(props) {
     const updateColor = () => {
-        props.getNote()
+        props.autoRefresh()
     }
     const updateArchive = (id) => {
         isArchivedApi(id)
             .then((response) => console.log(response))
             .catch((error) => console.log(error));
+        props.autoRefresh();
     }
     const updateIsDelete = (id) => {
         isDeleteApi(id)
