@@ -20,11 +20,14 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-
+import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
+import { Height, LightbulbOutlined } from '@mui/icons-material';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
-    marginTop: 60,
+    marginTop: 50,
     width: drawerWidth,
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -34,13 +37,13 @@ const openedMixin = (theme) => ({
 });
 
 const closedMixin = (theme) => ({
-    marginTop: 60,
+    marginTop: 50,
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: `calc(${theme.spacing(7)} + 1px)`,
+    width: `calc(${theme.spacing(7)} + 0.5px)`,
     [theme.breakpoints.up('sm')]: {
         width: `calc(${theme.spacing(8)} + 1px)`,
     },
@@ -79,8 +82,10 @@ export default function MiniDrawer(props) {
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
-                                justifyContent: open ? 'initial' : 'center',
                                 px: 2.5,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'flex-start'
                             }}
                         >
                             <ListItemIcon
@@ -92,15 +97,17 @@ export default function MiniDrawer(props) {
                             >
                                 <LightbulbOutlinedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Notes" />
+                            <ListItemText primary="Notes" sx={{ marginLeft: 5 }} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Reminders')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
-                                justifyContent: open ? 'initial' : 'center',
                                 px: 2.5,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'flex-start'
                             }}
                         >
                             <ListItemIcon
@@ -112,15 +119,18 @@ export default function MiniDrawer(props) {
                             >
                                 <NotificationsNoneOutlinedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Reminders" />
+                            <ListItemText primary='Reminders' sx={{ marginLeft: 5 }} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Edit Labels')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
-                                justifyContent: open ? 'initial' : 'center',
+                                //justifyContent: open ? 'initial' : 'center',
                                 px: 2.5,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'flex-start'
                             }}
                         >
                             <ListItemIcon
@@ -130,17 +140,19 @@ export default function MiniDrawer(props) {
                                     justifyContent: 'center',
                                 }}
                             >
-                                <LightbulbOutlinedIcon />
+                                <EditOutlinedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Edit Labels" />
+                            <ListItemText primary="Edit Labels" sx={{ marginLeft: 5 }} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Archive')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
-                                justifyContent: open ? 'initial' : 'center',
                                 px: 2.5,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'flex-start'
                             }}
                         >
                             <ListItemIcon
@@ -150,17 +162,19 @@ export default function MiniDrawer(props) {
                                     justifyContent: 'center',
                                 }}
                             >
-                                <LightbulbOutlinedIcon />
+                                <ArchiveOutlinedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Archive" />
+                            <ListItemText primary="Archive" sx={{ marginLeft: 5 }} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Bin')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
-                                justifyContent: open ? 'initial' : 'center',
                                 px: 2.5,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                justifyContent: 'flex-start'
                             }}
                         >
                             <ListItemIcon
@@ -170,9 +184,9 @@ export default function MiniDrawer(props) {
                                     justifyContent: 'center',
                                 }}
                             >
-                                <LightbulbOutlinedIcon />
+                                <DeleteOutlineOutlinedIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Bin" />
+                            <ListItemText primary="Bin" sx={{ marginLeft: 5 }} />
                         </ListItemButton>
                     </ListItem>
                 </List>

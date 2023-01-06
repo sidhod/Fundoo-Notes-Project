@@ -6,7 +6,8 @@ import { AddAlertOutlined, ArchiveOutlined, InsertPhotoOutlined, Margin, MoreVer
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import ColorPopper from '../colorpopper/colorPopper';
 import { isArchivedApi, isDeleteApi } from '../../services/dataServices';
-import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+
 function TakeNote3(props) {
     const updateColor = () => {
         props.autoRefresh()
@@ -41,7 +42,7 @@ function TakeNote3(props) {
                 <Box className='innerContainer2'>
                     <AddAlertOutlined className='greyButton' fontSize="small" />
                     {/* <PersonAddAlt1Outlined className='greyButton' fontSize="small" /> */}
-                    <DeleteForeverOutlinedIcon className='greyButton' fontSize="small" onClick={() => updateIsDelete(props.note._id)} />
+                    <DeleteOutlineOutlinedIcon className='greyButton' fontSize="small" onClick={() => updateIsDelete(props.note._id)} />
                     <ColorPopper action='update' id={props.note._id} updateColor={updateColor} />
                     <InsertPhotoOutlined className='greyButton' fontSize="small" />
                     <ArchiveOutlined className='greyButton' fontSize="small" onClick={() => updateArchive(props.note._id)} />

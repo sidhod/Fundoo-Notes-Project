@@ -9,7 +9,7 @@ import { getNoteApi } from "../../services/dataServices";
 
 function Dashboard() {
     const allNotes = {
-        display: 'flex', flexDirection: 'row', position: 'relative', left: '280px', top: '50px', width: '70vw', flexWrap: 'wrap'
+        display: 'flex', flexDirection: 'row', position: 'relative', left: '280px', top: '35px', width: '70vw', flexWrap: 'wrap'
     }
     const [toggle, setToggle] = useState(false)
     const [noteList, setNoteList] = useState([])
@@ -73,17 +73,22 @@ function Dashboard() {
         <div>
             <Header openDrawer={openDrawer} />
             <MiniDrawer drawertoggle={drawertoggle} listenDrawer={listenDrawer} />
-            <div>
-                {
-                    toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
-                }
-            </div>
-            <div style={allNotes}>
-                {
-                    noteList.map((note) => (
-                        <TakeNote3 note={note} autoRefresh={autoRefresh} />
-                    ))
-                }
+            <div style={{
+                position: "absolute",
+                top: "80px"
+            }}>
+                <div>
+                    {
+                        toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
+                    }
+                </div>
+                <div style={allNotes}>
+                    {
+                        noteList.map((note) => (
+                            <TakeNote3 note={note} autoRefresh={autoRefresh} />
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
