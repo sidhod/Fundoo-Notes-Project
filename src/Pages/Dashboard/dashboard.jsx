@@ -9,7 +9,7 @@ import { getNoteApi } from "../../services/dataServices";
 
 function Dashboard() {
     const allNotes = {
-        display: 'flex', flexDirection: 'row', position: 'relative', left: '280px', top: '35px', width: '70vw', flexWrap: 'wrap'
+        display: 'flex', flexDirection: 'row', position: 'relative', left: '280px', top: '35px', width: '80vw', flexWrap: 'wrap'
     }
     const [toggle, setToggle] = useState(false)
     const [noteList, setNoteList] = useState([])
@@ -58,6 +58,7 @@ function Dashboard() {
     }
     useEffect(() => {
         getNote()
+
     }, [noteOption]);
     console.log(noteList);
 
@@ -73,10 +74,8 @@ function Dashboard() {
         <div>
             <Header openDrawer={openDrawer} />
             <MiniDrawer drawertoggle={drawertoggle} listenDrawer={listenDrawer} />
-            <div style={{
-                position: "absolute",
-                top: "80px"
-            }}>
+            <div
+            >
                 <div>
                     {
                         toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
@@ -89,6 +88,7 @@ function Dashboard() {
                         ))
                     }
                 </div>
+
             </div>
         </div>
     )

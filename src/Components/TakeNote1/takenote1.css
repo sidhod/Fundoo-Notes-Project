@@ -1,8 +1,9 @@
 .takeNote {
     height: 7vh;
     width: 40vw;
-    position: relative;
+    position: absolute;
     left: 500px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
