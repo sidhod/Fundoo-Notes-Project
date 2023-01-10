@@ -10,6 +10,7 @@ import ColorPopper from '../colorpopper/colorPopper';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { Button, InputBase, Tooltip } from "@mui/material";
 import { updateColorApi } from '../../services/dataServices';
+import { Popper } from 'react-popper';
 
 function Model(props) {
     const [note, setUpdateNote] = useState({ Title: props.noteObject.Title, Descreption: props.noteObject.Descreption, Color: props.noteObject.Color })
@@ -33,7 +34,13 @@ function Model(props) {
         props.updateIsDelete(props.noteObject._id)
         props.handleClose()
     }
-
+    const listenColor = (color) => {
+        setUpdateNote((prevState) => ({
+            ...prevState,
+            Color: color
+        })
+        )
+    }
     const updateNotesTD = () => {
         updateColorApi(props.noteObject._id, note)
             .then((response) => console.log(response))
@@ -141,7 +148,7 @@ function Model(props) {
                         </IconButton>
                         <IconButton>
                             <Tooltip>
-                                <ColorPopper />
+                                <ColorPopper listenColor={listenColor} action='create' />
                             </Tooltip>
                         </IconButton>
                         <IconButton>

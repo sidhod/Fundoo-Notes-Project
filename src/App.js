@@ -7,6 +7,9 @@ import TakeNote1 from './Components/TakeNote1/takenote1';
 import TakeNote2 from './Components/TakeNote2/takenote2';
 import TakeNote3 from './Components/TakeNote3/takenote3';
 import Dashboard from './Pages/Dashboard/dashboard';
+import { Provider } from 'react-redux';
+import store from './Components/Redux/store'
+import RouterProject from './Components/Routers/Router';
 
 
 function App() {
@@ -32,7 +35,11 @@ function App() {
       <TakeNote1 />
       <TakeNote2 />
       <TakeNote3 /> */}
-      <Dashboard />
+      <Provider store={store}>
+        {/* <Dashboard /> */}
+        <RouterProject />
+      </Provider>
+
     </div>
   );
 }

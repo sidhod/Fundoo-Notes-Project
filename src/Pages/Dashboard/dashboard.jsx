@@ -78,7 +78,7 @@ function Dashboard() {
             >
                 <div>
                     {
-                        toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
+                        toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} autoRefresh={autoRefresh} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
                     }
                 </div>
                 <div style={allNotes}>

@@ -13,10 +13,11 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { connect } from 'react-redux';
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
-    marginTop: 65,
+    marginTop: 65.5,
     width: drawerWidth,
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -26,7 +27,7 @@ const openedMixin = (theme) => ({
 });
 
 const closedMixin = (theme) => ({
-    marginTop: 65,
+    marginTop: 65.5,
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -56,11 +57,14 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function MiniDrawer(props) {
+function MiniDrawer(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const selectOption = (noteOption) => {
         props.listenDrawer(noteOption);
+        props.dispatch({
+            type: `${noteOption}`
+        })
     }
     return (
         <Box sx={{ display: 'flex' }}>
@@ -110,7 +114,7 @@ export default function MiniDrawer(props) {
                             <ListItemText primary='Reminders' sx={{ marginLeft: 5 }} />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Edit Labels')}>
+                    <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Edit')}>
                         <ListItemButton
                             sx={{
                                 minHeight: 48,
@@ -182,3 +186,4 @@ export default function MiniDrawer(props) {
         </Box >
     );
 }
+export default connect()(MiniDrawer)

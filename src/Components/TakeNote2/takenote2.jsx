@@ -15,7 +15,6 @@ function TakeNote2(props) {
             ...prevState,
             Color: color
         })
-
         )
     }
     const takeTitle = (event) => {
@@ -42,8 +41,9 @@ function TakeNote2(props) {
         createNoteApi(note)
             .then(response => { console.log(response) })
             .catch(error => { console.log(error) });
-
+        props.autoRefresh();
     }
+
     return (
 
         <Paper elevation={5} className='takeNoteTwo' sx={{ backgroundColor: note.Color }}>
