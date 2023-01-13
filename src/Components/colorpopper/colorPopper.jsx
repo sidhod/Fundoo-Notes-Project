@@ -28,7 +28,7 @@ function ColorPopper(props) {
 
     return (
         <div>
-            <ColorLensOutlinedIcon className='greyButton' fontSize="small" style={{ marginTop: 5 }} onClick={handleClick} />
+            <ColorLensOutlinedIcon color='grey' fontSize="small" style={{ marginTop: 0 }} onClick={handleClick} />
             <Popper id={id} open={open} anchorEl={anchorEl} disablePortal>
                 <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper', display: "flex", flexDirection: "row" }}>
                     {

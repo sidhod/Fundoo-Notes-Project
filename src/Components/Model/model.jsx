@@ -43,7 +43,10 @@ function Model(props) {
     }
     const updateNotesTD = () => {
         updateColorApi(props.noteObject._id, note)
-            .then((response) => console.log(response))
+            .then((response) => {
+                console.log(response);
+                props.autoRefresh()
+            })
             .catch((error) => console.log(error))
         props.handleClose()
     }

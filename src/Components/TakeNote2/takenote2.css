@@ -1,4 +1,4 @@
-.takeNoteTwo {
+/* .takeNoteTwo {
     height: 20vh;
     width: 40vw;
     position: relative;
@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     border-radius: 10%;
 }
 
@@ -16,8 +17,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 5px;
 }
 
 .titlePin {
@@ -61,11 +60,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1%;
 }
 
 .note2d {
-    width: 60%;
+    width: 65%;
     height: 70%;
     display: flex;
     flex-direction: row;
@@ -91,4 +89,87 @@
 .buttonColor {
     color: rgb(165, 162, 162);
     font-size: medium;
+} */
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .takeNoteTwo {
+        width: 83vw;
+        height: 30vh;
+        position: relative;
+        left: 58px;
+        top: -30px;
+    }
+
+    .takeNote2A {
+        height: 100%;
+        /* border: 1px solid red; */
+    }
+
+    .description {
+        /* border: 1px solid red; */
+        height: 10vh;
+    }
+
+    .note2c {
+        flex-direction: column;
+    }
+
+    .note2d {
+        width: 100%;
+    }
+
+    .close {
+        margin-left: 60%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .takeNoteTwo {
+        width: 83vw;
+        height: 23vh;
+        position: relative;
+        left: 65px;
+        top: -50px;
+    }
+
+    .note2c {
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }
+
+    .note2d {
+        width: 85%;
+        /* border: 1px solid red; */
+        margin-left: -56px;
+    }
+
+    .close {
+        margin-left: 60%;
+    }
+}
+
+@media only screen and (min-width: 789px) and (max-width: 1024px) {
+    .takeNoteTwo {
+        width: 78vw;
+        height: 15vh;
+        position: relative;
+        left: 160px;
+        top: -60px;
+    }
+
+    .note2c {
+        flex-direction: row;
+        /* border: 1px solid red; */
+    }
+
+    .note2d {
+        width: 85%;
+        /* border: 1px solid red; */
+        margin-left: 0;
+    }
+
+    .close {
+        margin-left: 0;
+    }
 }

@@ -14,10 +14,11 @@ import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { connect } from 'react-redux';
+import './drawer.css'
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
-    marginTop: 65.5,
+    marginTop: '70px',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -27,7 +28,7 @@ const openedMixin = (theme) => ({
 });
 
 const closedMixin = (theme) => ({
-    marginTop: 65.5,
+    marginTop: '70px',
     transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -67,8 +68,8 @@ function MiniDrawer(props) {
         })
     }
     return (
-        <Box sx={{ display: 'flex' }}>
-            <Drawer variant="permanent" open={props.drawertoggle}>
+        <Box className='mainBox'>
+            <Drawer variant="permanent" open={props.drawertoggle} className='drawer'>
                 <List>
                     <ListItem disablePadding sx={{ display: 'block' }} onClick={() => selectOption('Notes')}>
                         <ListItemButton

@@ -1,245 +1,105 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .loginCard {
+        width: 100vw;
+        height: 115vh;
+    }
+
+    .TextField {
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+
+    .text {
+        /* border: 1px solid red; */
+        margin-left: 0px;
+    }
+
+    .content {
+        margin-top: 35px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .section3 {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .loginCard {
+        width: 100vw;
+        border: 1px solid blue;
+        margin-top: 15%;
+    }
+
+    .content {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .TextField {
+        width: 90%;
+        /* border: 1px solid red; */
+    }
+
+    .text {
+
+        width: 90%;
+
+    }
+
+    .section3 {
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 350px;
+    }
+
+    .notComputer {
+        padding-left: -120px;
+        width: 100%;
+        justify-items: flex-start;
+
+    }
+
+
 
 }
 
-.box {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 15%;
-    left: 35%;
-    width: 30vw;
-    height: 70vh;
-    padding: 2.5rem;
-    box-sizing: border-box;
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+@media only screen and (min-width: 789px) and (max-width: 1024px) {
+    .loginCard {
+        width: 50vh;
+        height: 60vh;
+    }
 
-.box h2 {
-    margin: 0px 0 -0.125rem;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    color: #202124;
-    font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-}
+    .content {
+        margin-top: 15px;
+    }
 
-.box p {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: .1px;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    text-align: center;
-}
+    .forgot-Password {
+        margin-left: -50px;
+    }
 
-.box .inputBox {
-    position: relative;
-}
+    .notComputer {
+        margin-left: -50px;
+        width: 100%;
+    }
 
-.box .inputBox input {
-    width: 93%;
-    padding: 0.625rem 10px;
-    font-size: 1rem;
-    letter-spacing: 0.062rem;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    background: transparent;
-    border-radius: 4px;
+    .link {
+        margin-left: -50px;
+    }
 
-}
+    .section3 {
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 50px;
+    }
 
-.Label1 {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    padding: 0.625rem 0;
-    font-size: 1rem;
-    color: grey;
-
-}
-
-.Label2 {
-    position: absolute;
-    top: 10;
-    left: 10px;
-    padding: 0.625rem 0;
-    font-size: 1rem;
-    color: grey;
-
-}
-
-.forgot-Password {
-    color: blue;
-    text-decoration: none;
-}
-
-.learn-more-label {
-    color: #57595f;
-    font-size: 15px;
-}
-
-.learn-more-button {
-    color: blue;
-    text-decoration: none;
-}
-
-.section-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.section-3 {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-
-}
-
-.create-account {
-    color: blue;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.button-2 {
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: #1a73e8;
-    padding: 0.625rem 1.25rem;
-    cursor: pointer;
-    border-radius: 0.312rem;
-    font-size: 1rem;
-    float: right;
-} */
-.loginPage {
-    height: 100vh;
-    width: 100vw;
-}
-
-.loginCard {
-    width: 30%;
-    border-radius: 8px;
-    border: 1px solid #dadce0;
-    display: block;
-    margin: 80px auto;
-    padding: 10px 10px 10px;
-    height: 70%;
-    align-items: center;
-    justify-content: center;
-}
-
-.fitWidth {
-    font-weight: 500;
-}
-
-.googleIcon {
-    margin-top: 15px;
-}
-
-.headText {
-    color: #202124;
-    padding-bottom: 0;
-    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.3333;
-    margin-bottom: 0;
-    margin-top: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.section2 {
-    padding: 10px;
-}
-
-.outlined {
-    width: 80%;
-}
-
-.notComputer {
-    padding-bottom: 3px;
-    padding-top: 20px;
-    color: #5f6368;
-    font-size: 14px;
-    line-height: 1.4286;
-}
-
-.link {
-    border-radius: 4px;
-    color: #1a73e8;
-    display: inline-block;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-.section3 {
-    justify-content: space-between;
-    padding: 35px 0;
-}
-
-.row {
-    display: flex;
-    border: 0px solid;
-    width: 75%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1% 7% 1% 13%;
-}
-
-.create {
-    color: #1a73e8;
-    display: inline-block;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 45px;
-}
-
-.loginButton {
-    background: #1a73e8;
-    color: #fff;
-    line-height: 22px;
-    font-size: 16px;
-    min-width: 88px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-}
-
-.forgot-Password {
-    color: blue;
-    text-decoration: none;
 }

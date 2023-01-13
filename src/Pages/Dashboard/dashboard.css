@@ -1,0 +1,54 @@
+.TakeNoteD3 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 280px;
+    top: 35px;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
+.Dashboard {
+    height: 100vh;
+    width: 100vw;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .Dashboard {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .TakeNoteD3 {
+        position: relative;
+        display: flex;
+        left: 65px;
+        top: -20px;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .Dashboard {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .TakeNoteD3 {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+@media only screen and (min-width:789px) and (max-width: 1024px) {
+
+    .TakeNoteD3 {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: -30px;
+        left: 200px;
+        width: 80vw;
+    }
+}

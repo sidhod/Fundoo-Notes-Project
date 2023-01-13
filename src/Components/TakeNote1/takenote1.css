@@ -1,14 +1,14 @@
-.takeNote {
+/* .takeNote {
     height: 6vh;
     width: 40vw;
     position: absolute;
     left: 500px;
-    top: 80px;
+    top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15%;
-}
+} */
 
 .takeNoteOne {
     box-sizing: border-box;
@@ -44,10 +44,30 @@
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .takeNote {
-        width: 90vw;
-        position: absolute;
-        left: 18%;
-        height: 5vh;
+        height: 7vh;
+        width: 85vw;
+        position: relative;
+        top: -50px;
     }
 
+    .takeNoteIcon {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        font-size: large;
+    }
 }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .takeNoteIcon {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+    }
+}
+
+@media only screen and (min-width: 789px) and (max-width: 1024px) {}

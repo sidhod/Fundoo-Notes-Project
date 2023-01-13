@@ -1,4 +1,6 @@
 
+import { Box } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import React, { useEffect, useState } from "react";
 import MiniDrawer from "../../Components/Drawer/drawer";
 import Header from "../../Components/header/header";
@@ -6,11 +8,58 @@ import TakeNote1 from "../../Components/TakeNote1/takenote1";
 import TakeNote2 from "../../Components/TakeNote2/takenote2";
 import TakeNote3 from "../../Components/TakeNote3/takenote3";
 import { getNoteApi } from "../../services/dataServices";
-
-function Dashboard() {
-    const allNotes = {
-        display: 'flex', flexDirection: 'row', position: 'relative', left: '280px', top: '35px', width: '80vw', flexWrap: 'wrap'
+import './dashboard.css'
+const dashboard = makeStyles({
+    TakeNoteD3: {
+        display: 'flex',
+        flexDirection: 'row',
+        position: 'relative',
+        left: '280px',
+        top: '35px',
+        width: '80vw',
+        flexWrap: 'wrap',
+    },
+    Dashboard: {
+        height: '100vh',
+        width: '100vw',
+    },
+    ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
+        TakeNoteD3: {
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative',
+            left: '60px',
+            top: '5px',
+            width: '80vw',
+            flexWrap: 'wrap',
+        },
+    },
+    ['@media only screen and (min-width: 480px) and (max-width: 768px)']: {
+        TakeNoteD3: {
+            display: 'flex',
+            flexDirection: 'row',
+            position: 'relative',
+            left: '180px',
+            top: '50px',
+            width: '76vw',
+            flexWrap: 'wrap',
+        },
+    },
+    ['@media only screen and (min-width: 789px) and (max-width: 1024px)']: {
+        TakeNoteD3: {
+            display: 'flex',
+            flexDirection: 'row',
+            position: 'relative',
+            left: '190px',
+            top: '65px',
+            width: '80vw',
+            flexWrap: 'wrap',
+        },
     }
+
+})
+function Dashboard() {
+    const dashboardstyle = dashboard()
     const [toggle, setToggle] = useState(false)
     const [noteList, setNoteList] = useState([])
     const [drawertoggle, setdrawertoggle] = useState(false);
@@ -71,7 +120,7 @@ function Dashboard() {
         console.log(noteOption);
     }
     return (
-        <div>
+        <div className={dashboardstyle.Dashboard}>
             <Header openDrawer={openDrawer} />
             <MiniDrawer drawertoggle={drawertoggle} listenDrawer={listenDrawer} />
             <div
@@ -81,7 +130,7 @@ function Dashboard() {
                         toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} autoRefresh={autoRefresh} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
                     }
                 </div>
-                <div style={allNotes}>
+                <div className={dashboardstyle.TakeNoteD3}>
                     {
                         noteList.map((note) => (
                             <TakeNote3 note={note} autoRefresh={autoRefresh} />

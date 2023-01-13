@@ -76,3 +76,16 @@
 .symbol-color {
     color: gray;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .main-header {
+        width: 100vw;
+        height: 6vh;
+    }
+
+    .searchHeader {
+        width: 10%;
+        margin-left: 150px;
+        margin-left: 20px;
+    }
+}
