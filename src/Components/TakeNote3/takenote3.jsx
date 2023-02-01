@@ -14,7 +14,7 @@ import Model from '../Model/model';
 import { makeStyles } from '@mui/styles';
 const takeNote3 = makeStyles({
     frame: {
-        width: '18vw',
+        width: '15.5vw',
         height: '20vh',
         display: 'flex'
     },
@@ -85,7 +85,7 @@ const takeNote3 = makeStyles({
     ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
         frame: {
             width: '78vw',
-            height: '15vh',
+            height: '18vh',
             display: 'flex',
             // border: '1px solid red'
         },
@@ -136,8 +136,8 @@ const takeNote3 = makeStyles({
 
     }, ['@media only screen and (min-width: 789px) and (max-width: 1024px)']: {
         frame: {
-            width: '24vw',
-            height: '19vh',
+            width: '28vw',
+            height: '20vh',
             // border: '1px solid red'
         },
 

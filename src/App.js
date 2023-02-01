@@ -12,31 +12,20 @@ import store from './Components/Redux/store'
 import RouterProject from './Components/Routers/Router';
 
 
+
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
       {/* <Signin /> */}
       {/* <Signup /> */}
       {/* <Header />
       <TakeNote1 />
       <TakeNote2 />
       <TakeNote3 /> */}
+      {/* <Test /> */}
       <Provider store={store}>
         {/* <Dashboard /> */}
+        {/* <Signup /> */}
         <RouterProject />
       </Provider>
 

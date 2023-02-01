@@ -334,7 +334,6 @@ function Signin() {
                             <div><TextField fullWidth error={regexObj.emailBorder} helperText={regexObj.emailHelper} className="outlined" label="Email" variant="outlined" onChange={takingEmail} /></div>
                             <div><TextField fullWidth error={regexObj.passwordBorder} helperText={regexObj.passwordHelper} className="outlined" label="Password" variant="outlined" margin="normal" width="" onChange={takingPassword} /></div>
                         </div>
-
                         <div className={signin.text}>
                             <div><a href="#" class={signin.forgotPassword}>Forgot password</a></div>
                             <div className={signin.notComputer}>

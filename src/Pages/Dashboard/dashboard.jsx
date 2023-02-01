@@ -1,5 +1,5 @@
 
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useEffect, useState } from "react";
 import MiniDrawer from "../../Components/Drawer/drawer";
@@ -11,17 +11,19 @@ import { getNoteApi } from "../../services/dataServices";
 import './dashboard.css'
 const dashboard = makeStyles({
     TakeNoteD3: {
-        display: 'flex',
-        flexDirection: 'row',
+        // display: 'flex',
+        // flexDirection: 'row',
         position: 'relative',
         left: '280px',
         top: '35px',
-        width: '80vw',
-        flexWrap: 'wrap',
+        width: '75%',
+        // flexWrap: 'wrap',
+        // border: '1px solid red'
     },
     Dashboard: {
         height: '100vh',
         width: '100vw',
+        // border: '1px solid red'
     },
     ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
         TakeNoteD3: {
@@ -37,9 +39,9 @@ const dashboard = makeStyles({
     ['@media only screen and (min-width: 480px) and (max-width: 768px)']: {
         TakeNoteD3: {
             display: 'flex',
-            flexDirection: 'row',
+            // flexDirection: 'row',
             position: 'relative',
-            left: '180px',
+            left: '150px',
             top: '50px',
             width: '76vw',
             flexWrap: 'wrap',
@@ -130,16 +132,28 @@ function Dashboard() {
                         toggle ? <TakeNote2 listenToTakeNoteProp2={listenToTakeNote2} autoRefresh={autoRefresh} /> : <TakeNote1 listenToTakeNoteProp1={listenToTakeNote1} />
                     }
                 </div>
-                <div className={dashboardstyle.TakeNoteD3}>
+                <Box className={dashboardstyle.TakeNoteD3}>
+                    <Grid container spacing={2}>
+                        {
+                            noteList.map((note) => (
+                                <Grid item lg={2.4} md={4} sm={6} xs={12}>
+                                    <TakeNote3 note={note} autoRefresh={autoRefresh} />
+                                </Grid>
+
+                            ))
+                        }
+                    </Grid>
+                </Box>
+                {/* <div className={dashboardstyle.TakeNoteD3}>
                     {
                         noteList.map((note) => (
                             <TakeNote3 note={note} autoRefresh={autoRefresh} />
                         ))
                     }
-                </div>
+                </div> */}
 
             </div>
-        </div>
+        </div >
     )
 }
 export default Dashboard;

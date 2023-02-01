@@ -98,7 +98,7 @@ const header = makeStyles({
     ['@media only screen and (min-width: 320px) and (max-width: 480px)']: {
         mainHeader: {
             width: '100vw',
-            height: '5.6vh',
+            // height: '5.6vh',
             position: 'fixed',
             top: '0px',
             backgroundColor: 'white',

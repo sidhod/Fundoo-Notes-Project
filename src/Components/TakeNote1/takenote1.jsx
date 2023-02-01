@@ -54,7 +54,7 @@ const useStyle = makeStyles({
             width: '78vw',
             position: 'relative',
             left: "58px",
-            top: "-13px",
+            top: "-5px",
             // border: '1px solid red'
         },
         takeNoteIcon: {
